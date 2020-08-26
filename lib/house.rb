@@ -55,4 +55,18 @@ class House
       room.area
     end
   end
+
+  def rooms_by_category
+    sorted_by_room = {}
+    @rooms.each do |room|
+      if room.category == :bedroom
+        sorted_by_room[:bedroom] = room
+      elsif room.category == :living_room
+        sorted_by_room[:living_room] = room
+      elsif room.category == :basement
+        sorted_by_room[:basement] = room
+      end
+    end
+    return sorted_by_room
+  end
 end
