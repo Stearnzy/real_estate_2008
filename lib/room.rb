@@ -19,5 +19,3 @@ class Room
     @painted = true
   end
 end
-
-require "pry"; binding.pry
