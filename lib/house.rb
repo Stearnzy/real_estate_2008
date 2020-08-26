@@ -37,4 +37,11 @@ class House
     end
     return house_area
   end
+
+  def details
+    house_details = {}
+    house_details["price"] = self.price
+    house_details["address"] = @address
+    return house_details
+  end
 end
