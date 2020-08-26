@@ -44,4 +44,15 @@ class House
     house_details["address"] = @address
     return house_details
   end
+
+  def price_per_square_foot
+    cost = self.price.to_f / self.area
+    cost.round(2)
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort_by do |room|
+      room.area
+    end
+  end
 end
