@@ -29,4 +29,12 @@ class House
       room.category == type
     end
   end
+
+  def area
+    house_area = 0
+    @rooms.each do |room|
+      house_area += room.area
+    end
+    return house_area
+  end
 end
