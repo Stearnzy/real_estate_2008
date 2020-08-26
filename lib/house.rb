@@ -15,4 +15,18 @@ class House
   def add_room(room)
     @rooms << room
   end
+
+  def above_market_average?
+    if self.price > 500000
+      true
+    else
+      false
+    end
+  end
+
+  def rooms_from_category(type)
+    @rooms.find_all do |room|
+      room.category == type
+    end
+  end
 end
